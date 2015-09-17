@@ -1521,7 +1521,7 @@
 			return {
 				build: function(btnName, btnObject)
 				{
-					var $button = $('<a href="#" class="re-icon re-' + btnName + '" rel="' + btnName + '" />').attr({'role': 'button', 'aria-label': btnObject.title, 'tabindex': '-1'});
+					var $button = $('<a href="javascript:;" class="re-icon re-' + btnName + '" rel="' + btnName + '" />').attr({'role': 'button', 'aria-label': btnObject.title, 'tabindex': '-1'});
 
 					// click
 					if (btnObject.func || btnObject.command || btnObject.dropdown)
@@ -3317,7 +3317,7 @@
 
 					$.each(dropdownObject, $.proxy(function(btnName, btnObject)
 					{
-						var $item = $('<a href="#" class="redactor-dropdown-' + btnName + '" role="button">' + btnObject.title + '</a>');
+						var $item = $('<a href="javascript:;" class="redactor-dropdown-' + btnName + '" role="button">' + btnObject.title + '</a>');
 						if (name == 'formatting') $item.addClass('redactor-formatting-' + btnName);
 
 						$item.on('click', $.proxy(function(e)
@@ -6492,7 +6492,7 @@
 				},
 				addTab: function(id, name, active)
 				{
-					var $tab = $('<a href="#" rel="tab' + id + '">').text(name);
+					var $tab = $('<a href="javascript:;" rel="tab' + id + '">').text(name);
 					if (active)
 					{
 						$tab.addClass('active');
@@ -6995,8 +6995,8 @@
 					if (href.length > 24) href = href.substring(0, 24) + '...';
 
 					var aLink = $('<a href="' + $link.attr('href') + '" target="_blank" />').html(href).addClass('redactor-link-tooltip-action');
-					var aEdit = $('<a href="#" />').html(this.lang.get('edit')).on('click', $.proxy(this.link.show, this)).addClass('redactor-link-tooltip-action');
-					var aUnlink = $('<a href="#" />').html(this.lang.get('unlink')).on('click', $.proxy(this.link.unlink, this)).addClass('redactor-link-tooltip-action');
+					var aEdit = $('<a href="javascrip:;" />').html(this.lang.get('edit')).on('click', $.proxy(this.link.show, this)).addClass('redactor-link-tooltip-action');
+					var aUnlink = $('<a href="javascript:;" />').html(this.lang.get('unlink')).on('click', $.proxy(this.link.unlink, this)).addClass('redactor-link-tooltip-action');
 
 					tooltip.append(aLink).append(' | ').append(aEdit).append(' | ').append(aUnlink);
 					tooltip.css({
