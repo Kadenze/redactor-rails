@@ -46,14 +46,14 @@ if (!RedactorPlugins) var RedactorPlugins = {};
 				{
 					var color = colors[z];
 
-					var $swatch = $('<a rel="' + color + '" data-rule="' + rule +'" href="#" style="float: left; font-size: 0; border: 2px solid #fff; padding: 0; margin: 0; width: 22px; height: 22px;"></a>');
+					var $swatch = $('<a rel="' + color + '" data-rule="' + rule +'" href="javascript:;" style="float: left; font-size: 0; border: 2px solid #fff; padding: 0; margin: 0; width: 22px; height: 22px;"></a>');
 					$swatch.css('background-color', color);
 					$swatch.on('click', func);
 
 					$dropdown.append($swatch);
 				}
 
-				var $elNone = $('<a href="#" style="display: block; clear: both; padding: 5px; font-size: 12px; line-height: 1;"></a>').html(this.lang.get('none'));
+				var $elNone = $('<a href="javascript:;" style="display: block; clear: both; padding: 5px; font-size: 12px; line-height: 1;"></a>').html(this.lang.get('none'));
 				$elNone.on('click', $.proxy(function(e)
 				{
 					e.preventDefault();
