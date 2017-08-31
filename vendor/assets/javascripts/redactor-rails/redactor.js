@@ -7634,6 +7634,10 @@
 					{
 						var node2 = this.selection.getMarker(2);
 						this.selection.setMarker(this.range, node2, false);
+						if (this.utils.browser('chrome'))
+						{
+					    this.caret.set(node1, 0, node2, 0);
+						}
 					}
 
 					this.savedSel = this.$editor.html();
